@@ -108,7 +108,7 @@
   user-select: none;
   font-size: 2rem;
   padding: 0 0.2rem;
-  background: #fff;
+  background: linear-gradient(to bottom, #fff 40%, transparent);
   color: #898989;
   transition: all 0.25s ease-in-out;
 }
