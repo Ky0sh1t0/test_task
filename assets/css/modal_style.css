@@ -7,6 +7,15 @@
   top: 0;
 }
 
+.backdropShadow {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(223, 223, 223, 0.5019607843);
+}
+
 .noscroll {
   overflow: hidden;
 }
@@ -39,6 +48,7 @@
   background: #D9D9D9;
   border-radius: 100%;
   align-content: center;
+  cursor: pointer;
 }
 .modal button {
   border: none;
@@ -66,6 +76,7 @@
   position: relative;
 }
 .modal .left-cont .form-field .input-field {
+  width: 100%;
   border: 1px solid #D9D9D9;
   border-radius: 1rem;
   font-size: 2rem;
@@ -104,6 +115,76 @@
 .modal .right-cont {
   border-radius: 0 2.4rem 2.4rem 0;
   overflow: hidden;
+}
+.modal .right-cont img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .modal {
+    width: 65rem;
+    height: 45rem;
+  }
+  .modal .btn-close {
+    width: 3.6rem;
+    height: 3.6rem;
+    font-size: 2.2rem;
+  }
+  .modal .left-cont {
+    padding: 4rem 3rem 5.5rem 2.5rem;
+  }
+  .modal .left-cont .logo-img {
+    margin-bottom: 1.5rem;
+  }
+  .modal .left-cont .modal_tit {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+  }
+  .modal .left-cont .modal_text {
+    font-size: 1.6rem;
+    margin-bottom: 2.4rem;
+  }
+  .modal .left-cont .form_manager {
+    margin-bottom: 1.8rem;
+  }
+  .modal .left-cont .form_manager .form-field .input-field {
+    padding: 0.6rem 1rem 0.45rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.8rem;
+  }
+  .modal .left-cont .form_manager .form-field .label-field {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .modal {
+    width: unset;
+    height: 90%;
+    bottom: 0;
+    top: unset;
+    border-radius: 2rem 0 0 0;
+    flex-direction: column-reverse;
+    left: 0;
+    right: 0;
+  }
+  .modal .left-cont {
+    padding: 2rem;
+  }
+  .modal .left-cont .flex-wrap-modal {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1.2rem;
+  }
+  .modal .left-cont .flex-wrap-modal > * {
+    margin-bottom: 0;
+  }
+  .modal .left-cont .modal_text {
+    margin-bottom: 1.2rem;
+  }
+  .modal .right-cont {
+    border-radius: 2rem 2rem 0 0;
+  }
 }
 
 /*# sourceMappingURL=modal_style.css.map */

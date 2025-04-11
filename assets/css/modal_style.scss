@@ -9,6 +9,15 @@
     top: 0;
 }
 
+.backdropShadow {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    top:0;
+    background:  #dfdfdf80;
+}
+
 .noscroll {
     overflow: hidden;
 }
@@ -41,6 +50,7 @@
         background: #D9D9D9;
         border-radius: 100%;
         align-content: center;
+        cursor: pointer;
     }
 
     button {
@@ -75,6 +85,7 @@
             position: relative;
 
             .input-field {
+                width: 100%;
                 border: 1px solid #D9D9D9;
                 border-radius: 1rem;
                 font-size: 2rem;
@@ -122,5 +133,91 @@
     .right-cont {
         border-radius: 0 2.4rem 2.4rem 0;
         overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        width: 65rem;
+        height: 45rem;
+    
+        .btn-close {
+            width: 3.6rem;
+            height: 3.6rem;
+            font-size: 2.2rem;
+        }
+
+        .left-cont {
+            padding: 4rem 3rem 5.5rem 2.5rem;
+
+            .logo-img {
+                margin-bottom: 1.5rem;
+            }
+
+            .modal_tit {
+                font-size: 2.8rem;
+                margin-bottom: 1.2rem;
+            }
+
+            .modal_text {
+                font-size: 1.6rem;
+                margin-bottom: 2.4rem;
+            }
+
+
+            .form_manager {
+                margin-bottom: 1.8rem;
+                
+                .form-field {
+                    .input-field {
+                        padding: .6rem 1rem .45rem;
+                        font-size: 1.8rem;
+                        margin-bottom: 1.8rem;
+                    }
+    
+                    .label-field {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 767px) {
+        width: unset;
+        height: 90%;
+        bottom: 0;
+        top: unset;
+        border-radius: 2rem 0 0 0;
+        flex-direction: column-reverse;
+        left: 0;
+        right: 0;
+
+        .left-cont {
+            padding: 2rem;
+
+            .flex-wrap-modal {
+                display: flex;
+                justify-content: space-evenly;
+                margin-bottom: 1.2rem;
+
+                & > * {
+                    margin-bottom: 0;
+                }
+            }
+
+            .modal_text {
+                margin-bottom: 1.2rem;
+            }
+        }
+
+        .right-cont {
+            border-radius: 2rem 2rem 0 0;
+        }
     }
 }

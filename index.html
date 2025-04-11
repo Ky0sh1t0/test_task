@@ -45,6 +45,34 @@
 
         <a data-sign="sign-in" class="btn btn-sign btn-white">Sign In</a>
         <a data-sign="sign-up" class="btn btn-sign btn-indigo" onclick="showModal()">Sign Up</a>
+
+        <div class="menu_bar">
+            <div class="burger-menu-ico" onclick="openMenu()">
+                <img src="./assets/images/burger-menu.png" alt="">
+            </div>
+
+            <menu class="burger-menu-content">
+                <div class="account-info">
+                    <div class="account-ico">
+                        <img src="./assets/images/account-ico.png" alt="">
+                    </div>
+                    <p class="fs-b-s">log in to see info</p>
+                </div>
+
+                <nav class="burger-menu-navigation">
+                    <a href="" class="nav-item active">Product</a>
+                    <a href="" class="nav-item">Features</a>
+                    <a href="" class="nav-item">Marketplace</a>
+                    <a href="" class="nav-item">Company</a>
+                </nav>
+
+                <div class="btn-cont">
+                    <a data-sign="sign-in" class="btn-menu">Sign In</a>
+                    <a data-sign="sign-up" class="btn-menu" onclick="showModal()">Sign Up</a>
+                </div>
+            </menu>
+        </div>
+
       </div>
     </header>
 
@@ -79,53 +107,53 @@
                     </div>
     
                     <div class="absolute-cont-main successfull-cont">
-                    <div class="absolute-cont-wrap">
-                        <span class="svg-ico svg-ico-orange">
-                        <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                            d="M20 5H4C2.89543 5 2 5.89543 2 7V17C2 18.1046 2.89543 19 4 19H20C21.1046 19 22 18.1046 22 17V7C22 5.89543 21.1046 5 20 5Z"
-                            stroke="white"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            />
-                            <path
-                            d="M2 10H22"
-                            stroke="white"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            />
-                        </svg>
-                        </span>
-    
-                        <span class="successfull_text">
-                        <h6 class="fs-h-xs">Successfully sent</h6>
-                        <p class="fs-b-xs div_text">200+ send total</p>
-                        </span>
-                    </div>
-    
-                    <div class="people-in">
-                        <div class="img-person">
-                        <img src="./assets/images/person1.png" alt="" />
+                        <div class="absolute-cont-wrap">
+                            <span class="svg-ico svg-ico-orange">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                d="M20 5H4C2.89543 5 2 5.89543 2 7V17C2 18.1046 2.89543 19 4 19H20C21.1046 19 22 18.1046 22 17V7C22 5.89543 21.1046 5 20 5Z"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                />
+                                <path
+                                d="M2 10H22"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                />
+                            </svg>
+                            </span>
+        
+                            <span class="successfull_text">
+                            <h6 class="fs-h-xs">Successfully sent</h6>
+                            <p class="fs-b-xs div_text">200+ send total</p>
+                            </span>
                         </div>
-                        <div class="img-person">
-                        <img src="./assets/images/person2.png" alt="" />
+        
+                        <div class="people-in">
+                            <div class="img-person">
+                            <img src="./assets/images/person1.png" alt="" />
+                            </div>
+                            <div class="img-person">
+                            <img src="./assets/images/person2.png" alt="" />
+                            </div>
+                            <div class="img-person">
+                            <img src="./assets/images/person3.png" alt="" />
+                            </div>
+        
+                            <div class="add-new-person">
+                            <img src="./assets/images/plus-ico.svg" alt="" />
+                            </div>
                         </div>
-                        <div class="img-person">
-                        <img src="./assets/images/person3.png" alt="" />
-                        </div>
-    
-                        <div class="add-new-person">
-                        <img src="./assets/images/plus-ico.svg" alt="" />
-                        </div>
-                    </div>
                     </div>
     
                     <div class="tm__mainhead-text-cont">
@@ -142,8 +170,8 @@
                         <img src="./assets/images/play_button.svg" alt="" />
                     </div>
     
-                    <video onclick="playVideo()" class="videoplayer" muted disablePictureInPicture preload="metadata">
-                        <source src="./assets/video/hl.mp4" />
+                    <video id="videoplayer" onclick="playVideo()" class="videoplayer" muted disablePictureInPicture>
+                        <source src="./assets/video/neon_lines_360.mp4"/>
                     </video>
                     </div>
                 </section>
@@ -156,7 +184,7 @@
     
                     <div class="tm__WhyDlex-slider">
                     <div class="WhyDlex-card">
-                        <img src="./assets/images/UIDesign.png" alt="" />
+                        <img class="card-svg-ico" src="./assets/images/UIDesign.png" alt="" />
                         <h3 class="fs-h-xs div_tit">UI Design</h3>
                         <p class="fs-b-s div_text">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -165,7 +193,7 @@
                     </div>
     
                     <div class="WhyDlex-card">
-                        <img src="./assets/images/UXResearch.png" alt="" />
+                        <img class="card-svg-ico" src="./assets/images/UXResearch.png" alt="" />
                         <h3 class="fs-h-xs div_tit">UX & Research</h3>
                         <p class="fs-b-s div_text">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -174,7 +202,7 @@
                     </div>
     
                     <div class="WhyDlex-card">
-                        <img src="./assets/images/FastDelivery.png" alt="" />
+                        <img class="card-svg-ico" src="./assets/images/FastDelivery.png" alt="" />
                         <h3 class="fs-h-xs div_tit">Fast delivery</h3>
                         <p class="fs-b-s div_text">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -183,7 +211,7 @@
                     </div>
     
                     <div class="WhyDlex-card">
-                        <img src="./assets/images/CustomerSupport.png" alt="" />
+                        <img class="card-svg-ico" src="./assets/images/CustomerSupport.png" alt="" />
                         <h3 class="fs-h-xs div_tit">Customer support</h3>
                         <p class="fs-b-s div_text">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -192,7 +220,7 @@
                     </div>
     
                     <div class="WhyDlex-card">
-                        <img src="./assets/images/UIDesign.png" alt="" />
+                        <img class="card-svg-ico" src="./assets/images/UIDesign.png" alt="" />
                         <h3 class="fs-h-xs div_tit">UI Design</h3>
                         <p class="fs-b-s div_text">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -201,7 +229,7 @@
                     </div>
     
                     <div class="WhyDlex-card">
-                        <img src="./assets/images/UXResearch.png" alt="" />
+                        <img class="card-svg-ico" src="./assets/images/UXResearch.png" alt="" />
                         <h3 class="fs-h-xs div_tit">UX & Research</h3>
                         <p class="fs-b-s div_text">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -210,7 +238,7 @@
                     </div>
     
                     <div class="WhyDlex-card">
-                        <img src="./assets/images/FastDelivery.png" alt="" />
+                        <img class="card-svg-ico" src="./assets/images/FastDelivery.png" alt="" />
                         <h3 class="fs-h-xs div_tit">Fast delivery</h3>
                         <p class="fs-b-s div_text">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -219,7 +247,7 @@
                     </div>
     
                     <div class="WhyDlex-card">
-                        <img src="./assets/images/CustomerSupport.png" alt="" />
+                        <img class="card-svg-ico" src="./assets/images/CustomerSupport.png" alt="" />
                         <h3 class="fs-h-xs div_tit">Customer support</h3>
                         <p class="fs-b-s div_text">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -228,7 +256,7 @@
                     </div>
     
                     <div class="WhyDlex-card">
-                        <img src="./assets/images/UIDesign.png" alt="" />
+                        <img class="card-svg-ico" src="./assets/images/UIDesign.png" alt="" />
                         <h3 class="fs-h-xs div_tit">UI Design</h3>
                         <p class="fs-b-s div_text">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -237,7 +265,7 @@
                     </div>
     
                     <div class="WhyDlex-card">
-                        <img src="./assets/images/UXResearch.png" alt="" />
+                        <img class="card-svg-ico" src="./assets/images/UXResearch.png" alt="" />
                         <h3 class="fs-h-xs div_tit">UX & Research</h3>
                         <p class="fs-b-s div_text">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -246,7 +274,7 @@
                     </div>
     
                     <div class="WhyDlex-card">
-                        <img src="./assets/images/FastDelivery.png" alt="" />
+                        <img class="card-svg-ico" src="./assets/images/FastDelivery.png" alt="" />
                         <h3 class="fs-h-xs div_tit">Fast delivery</h3>
                         <p class="fs-b-s div_text">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -255,7 +283,7 @@
                     </div>
     
                     <div class="WhyDlex-card">
-                        <img src="./assets/images/CustomerSupport.png" alt="" />
+                        <img class="card-svg-ico" src="./assets/images/CustomerSupport.png" alt="" />
                         <h3 class="fs-h-xs div_tit">Customer support</h3>
                         <p class="fs-b-s div_text">
                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do
@@ -288,15 +316,19 @@
                                 synchronization or anomaly detection algorithms, empowering
                                 teams to make data-driven decisions.
                             </p>
-                            <div class="img-wrap">
-                                <img src="./assets/images/improveAnalytic.png" alt="">
-                            </div>
 
-                            <ul class="ul_agreed">
-                                <li class="fs-b-xs">Upgrade your customer experience instantly</li>
-                                <li class="fs-b-xs">Retain more, happier customers</li>
-                                <li class="fs-b-xs">Start with done-for-you account setup</li>
-                            </ul>
+                            <div class="flex-wrap-cont">
+                                
+                                <div class="img-wrap">
+                                    <img src="./assets/images/improveAnalytic.png" alt="">
+                                </div>
+    
+                                <ul class="ul_agreed">
+                                    <li class="fs-b-xs">Upgrade your customer experience instantly</li>
+                                    <li class="fs-b-xs">Retain more, happier customers</li>
+                                    <li class="fs-b-xs">Start with done-for-you account setup</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <div class="maximize-case">
@@ -307,16 +339,18 @@
                                 which are believed and relied upon by.
                             </p>
 
-                            <div class="img-wrap">
-                                <img class="img-acceptance_1" src="./assets/images/maximize-acceptance_1.png" alt="">
-                                <img class="img-acceptance_2" src="./assets/images/maximize-acceptance_2.png" alt="">
+                            <div class="flex-wrap-cont">
+                                <div class="img-wrap">
+                                    <img class="img-acceptance_1" src="./assets/images/maximize-acceptance_1.png" alt="">
+                                    <img class="img-acceptance_2" src="./assets/images/maximize-acceptance_2.png" alt="">
+                                </div>
+    
+                                <ul class="ul_agreed">
+                                    <li class="fs-b-xs">Upgrade your customer experience instantly</li>
+                                    <li class="fs-b-xs">Retain more, happier customers</li>
+                                    <li class="fs-b-xs">Start with done-for-you account setup</li>
+                                </ul>
                             </div>
-
-                            <ul class="ul_agreed">
-                                <li class="fs-b-xs">Upgrade your customer experience instantly</li>
-                                <li class="fs-b-xs">Retain more, happier customers</li>
-                                <li class="fs-b-xs">Start with done-for-you account setup</li>
-                            </ul>
                         </div>
                     </div>
                 </section>
@@ -352,7 +386,7 @@
                             amet sint velit officia consequat duis enim velit mollit.
                         </p>
 
-                        <a class="btn btn-white btn-white2" onclick="showModal()">Sign up for free</a>
+                        <a class="btn btn-white2" onclick="showModal()">Sign up for free</a>
                     </div>
                 </section>
             </div>
@@ -362,8 +396,10 @@
             <a class="btn-close" onclick="closeModal()">+</a>
 
             <div class="left-cont">
-                <img class="logo-img" src="./assets/images/logo_icon.svg" alt="">
-                <h2 class="fs-h-l modal_tit">Join the club</h2>
+                <div class="flex-wrap-modal">
+                    <img class="logo-img" src="./assets/images/logo_icon.svg" alt="">
+                    <h2 class="fs-h-l modal_tit">Join the club</h2>
+                </div>
                 <p class="fs-b-xl modal_text">
                     Subscribe and Get an Extra<br>
                     25% Off on your first purchase.
