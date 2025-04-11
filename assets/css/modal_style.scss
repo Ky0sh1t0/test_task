@@ -93,8 +93,14 @@
                 margin-bottom: 3rem;
                 transition: border .2s ease-in-out;
 
+                
                 &:hover {
                     border: 1px solid #898989;
+                }
+
+                &:-internal-autofill-selected + label {
+                    top: -1rem;
+                    font-size: 1.2rem;
                 }
 
                 &:focus {
